@@ -34,7 +34,7 @@ const Navbar = () => {
                            <div className='d-flex'>
                                <Link className='nav-link items fw-bold' to='addservices'>Add Services</Link>
                                <Link className='nav-link items fw-bold' to='myorders'>My Order</Link>
-                               <Link className='nav-link items fw-bold' to='myorders'>Manage All Orders</Link>
+                               <Link className='nav-link items fw-bold' to='manageorders'>Manage All Orders</Link>
                                <span className='m-2 text-danger fw-bold'> {user.displayName}</span>
                                <button className='m-2 btn btn-primary' onClick={googleSignOut}>Log Out</button> 
 

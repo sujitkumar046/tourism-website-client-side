@@ -1,18 +1,30 @@
 import React from 'react';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../Hook/UseAuth';
 import Navbar from '../Navbar/Navbar';
 
 
 const Login = () => {
 
+    const location = useLocation()
+    const history = useHistory();
     const {SignInUsingGoogle } = useAuth()
+
+    const redirect_URL = location.state?.from || './home' ;
+
+    const handleSignIn = () => {
+        SignInUsingGoogle ()
+        .then (result => {
+            history.push(redirect_URL)
+        } )
+    }
 
 
     return (
         <>
 
         <Navbar></Navbar>
-             <button className='btn btn-warning' onClick={SignInUsingGoogle}>Google Sign in</button>
+             <button className='btn btn-warning' onClick={handleSignIn}>Google Sign in</button>
         </>
     );
 };

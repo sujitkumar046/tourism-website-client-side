@@ -7,6 +7,9 @@ import Login from './Component/Shared/Login/Login';
 import TourPackages from './Component/TourPackages/TourPackages';
 import AddServices from './Component/AddServices/AddServices';
 import DetailedService from './Component/DetailedService/DetailedService';
+import PrivateRout from './Component/Shared/PrivateRoute/PrivateRout';
+import MangeOrder from './Component/ManageOrder/MangeOrder';
+import MyOrders from './Component/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -26,11 +29,17 @@ function App() {
         <Route path='/tourpackages'>
           <TourPackages></TourPackages>
         </Route>
-        <Route path='/detailedservices/:packageID'>
+        <PrivateRout path='/detailedservices/:packageID'>
          <DetailedService></DetailedService>
-        </Route>
+        </PrivateRout>
         <Route path='/addservices'>
           <AddServices></AddServices>
+        </Route>
+        <Route path='/manageorders'>
+          <MangeOrder></MangeOrder>
+        </Route>
+        <Route path='/myorders'>
+          <MyOrders></MyOrders>
         </Route>
 
 

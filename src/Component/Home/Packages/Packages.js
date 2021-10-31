@@ -5,25 +5,26 @@ const Packages = () => {
     const [packages, Setpackages] = useState([])
 
     useEffect (() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://gentle-garden-76977.herokuapp.com/services')
         .then (res=> res.json())
         .then (data => Setpackages(data))
     }, [])
 
     return (
-        <div className='row'>
+        <div className='row container-fluid'>
             {
                 packages.map (pack => 
-                <div className='col-md-4 col-lg-4 col-sm-12 g-2'>
+                <div className='col-md-4 col-lg-4 col-sm-12 g-4'>
                     <div className='card-group h-100'>
                         <div className="card">
                         <img src={pack.img} className="card-img mx-auto d-block img-fluid" alt="" />
                         <div className='"card-body"'>
-                            <h2 className='"card-title'>{pack.name}</h2>
-                            <h5 className='card-text'>{pack.description}</h5>
+                            <h3 className='"card-title'>{pack.name}</h3>
+                            <h5 className='card-text'>{pack.duration}</h5>
+                            <h4>Price: <span className='text-danger'>${pack.price}</span></h4>
                         </div>
                         <div className='card-footer'>
-                            <button>Book Now</button>
+                            <button className='btn btn-success'>Book Now</button>
 
                         </div>
 
