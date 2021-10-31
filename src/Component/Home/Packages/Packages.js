@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Packages = () => {
 
@@ -31,7 +32,12 @@ const Packages = () => {
                             <h4>Price: <span className='text-danger'>${pack.price}</span></h4>
                         </div>
                         <div className='card-footer'>
+
+                            <Link to ={`/detailedservices/${pack._id}`}>
                             <button className='btn btn-success'>Book Now</button>
+                            </Link>
+                            
+                            
 
                         </div>
 

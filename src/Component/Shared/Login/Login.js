@@ -10,7 +10,7 @@ const Login = () => {
     const history = useHistory();
     const {SignInUsingGoogle } = useAuth()
 
-    const redirect_URL = location.state?.from || './home' ;
+    const redirect_URL = location.state?.from ||'/home' ;
 
     const handleSignIn = () => {
         SignInUsingGoogle ()
@@ -23,8 +23,13 @@ const Login = () => {
     return (
         <>
 
+        <div className='container-fluid mt-5'>
         <Navbar></Navbar>
              <button className='btn btn-warning' onClick={handleSignIn}>Google Sign in</button>
+
+        </div>
+
+        
         </>
     );
 };

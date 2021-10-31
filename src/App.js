@@ -10,6 +10,7 @@ import DetailedService from './Component/DetailedService/DetailedService';
 import PrivateRout from './Component/Shared/PrivateRoute/PrivateRout';
 import MangeOrder from './Component/ManageOrder/MangeOrder';
 import MyOrders from './Component/MyOrders/MyOrders';
+import PageNotFound from './Component/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
         <PrivateRout path='/detailedservices/:packageID'>
          <DetailedService></DetailedService>
         </PrivateRout>
+        <Route path='*'>
+          <PageNotFound></PageNotFound>
+
+        </Route>
         
 
 
