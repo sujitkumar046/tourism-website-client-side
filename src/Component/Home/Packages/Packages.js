@@ -11,7 +11,14 @@ const Packages = () => {
     }, [])
 
     return (
+        <>
+
         <div className='row container-fluid'>
+            <div>
+            <h4 className='text-primary'>Enjoy Your</h4>
+            <h1 className='fs-1 fw-bold'>Holiday!</h1>
+            </div>
+            
             {
                 packages.map (pack => 
                 <div className='col-md-4 col-lg-4 col-sm-12 g-4'>
@@ -39,6 +46,8 @@ const Packages = () => {
             }
             
         </div>
+
+        </>
     );
 };
 

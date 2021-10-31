@@ -8,7 +8,7 @@ const MyOrders = () => {
     const {user} = useAuth()
     const [myorders, Setmyorders] = useState([]);
     useEffect (()=> {
-        fetch('http://localhost:5000/orders')
+        fetch('https://gentle-garden-76977.herokuapp.com/orders')
         .then (res=>res.json())
         .then (data => {
             const myPlacedOrder = data.filter (order => order.email === user.email )
@@ -20,7 +20,7 @@ const MyOrders = () => {
 
         const proceedtoDelete = window.confirm('Want to delete')
         if (proceedtoDelete) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://gentle-garden-76977.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
         .then (res=> res.json())

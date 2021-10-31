@@ -6,7 +6,7 @@ const MangeOrder = () => {
 
     const [allorders, Setallorders] = useState([]);
     useEffect (()=> {
-        fetch('http://localhost:5000/orders')
+        fetch('https://gentle-garden-76977.herokuapp.com/orders')
         .then (res=>res.json())
         .then (data => Setallorders (data))
     }, [])
@@ -16,7 +16,7 @@ const MangeOrder = () => {
 
         const proceed = window.confirm ('Are you sure to delete')
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, 
+            fetch(`https://gentle-garden-76977.herokuapp.com/orders/${id}`, 
         {
             method: 'DELETE'
         })
@@ -40,7 +40,7 @@ const MangeOrder = () => {
 
         <>
         <Navbar></Navbar>
-        <div className='row container-fluid'>
+        <div className='row container-fluid my-5'>
             <h2>Here are all the orders : {allorders.length}</h2>
             {
                 allorders.map (singleorder => 

@@ -29,9 +29,6 @@ function App() {
         <Route path='/tourpackages'>
           <TourPackages></TourPackages>
         </Route>
-        <PrivateRout path='/detailedservices/:packageID'>
-         <DetailedService></DetailedService>
-        </PrivateRout>
         <Route path='/addservices'>
           <AddServices></AddServices>
         </Route>
@@ -41,6 +38,10 @@ function App() {
         <Route path='/myorders'>
           <MyOrders></MyOrders>
         </Route>
+        <PrivateRout path='/detailedservices/:packageID'>
+         <DetailedService></DetailedService>
+        </PrivateRout>
+        
 
 
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 
 
 import Navbar from '../Shared/Navbar/Navbar';
@@ -25,7 +26,7 @@ const TourPackages = () => {
         <>
          <Navbar></Navbar>
         <div className='row container-fluid '>
-        <h2>Hello : Got the {tourpackages.length}</h2>
+        <h2 className='mt-2'>Hello! Explore the World with Our Tour packages</h2>
 
             {tourpackages.map (tour => 
             <div className='col-md-4 col-lg-4 col-sm-12 g-2 p-1'>
@@ -55,6 +56,7 @@ const TourPackages = () => {
 
 
         </div>
+        <Footer></Footer>
             
             
            
