@@ -31,14 +31,20 @@ const Navbar = () => {
                             <Link to="/tourpackages" className="nav-link items fw-bold" id='item-color'> Tour Packages </Link>
                             
                            {user.email ? 
-                           <div className='d-flex'>
+                           <ul className='d-flex'>
+                               <li>
                                <Link id='item-color' className='nav-link items fw-bold'  to='addservices'>Add Services</Link>
+                               </li>
+                               <li>
                                <Link id='item-color' className='nav-link items fw-bold' to='myorders'>My Order</Link>
+                               </li>
+                               <li>
                                <Link id='item-color' className='nav-link items fw-bold' to='manageorders'>Manage All Orders</Link>
+                               </li>
                                <span className='m-2 text-danger fw-bold'> {user.displayName}</span>
                                <button className='m-2 btn btn-primary' onClick={googleSignOut}>Log Out</button> 
 
-                           </div>
+                           </ul>
                            
                            : <Link to="/login" id='item-color' className="nav-link items fw-bold" > Login </Link> }
                 

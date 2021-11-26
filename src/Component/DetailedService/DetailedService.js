@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import { useRef } from 'react/cjs/react.development';
+import { Link, useParams } from 'react-router-dom';
+import { useRef } from 'react';
 import useAuth from '../../Hook/UseAuth';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
@@ -50,6 +50,7 @@ const DetailedService = () => {
             if (data.insertedId) {
                 alert ('Successfully placed the order')
                 e.target.reset()
+                
             }
         } )
 
@@ -79,8 +80,11 @@ const DetailedService = () => {
             <input className='w-75' ref={nameRef} type="text" value={user.displayName} placeholder='name' /> <br /> <br />
             <input className='w-75' ref={emailRef} type="text" value={user.email} placeholder='description' /><br /> <br />
             <input className='w-75' ref={phoneRef} type="text"  placeholder='Phone' required /> <br /> <br />
-            
+
             <button className='btn btn-primary' type="submit">Book Now</button>
+           
+            
+            
 
 
 

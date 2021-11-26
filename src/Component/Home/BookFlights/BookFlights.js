@@ -4,7 +4,7 @@ const BookFlights = () => {
 
     const [flights, Setflights] = useState([])
     useEffect (() => {
-        fetch('http://localhost:5000/flights')
+        fetch('https://gentle-garden-76977.herokuapp.com/flights')
         .then (res =>res.json())
         .then (data => Setflights(data))
     }, [])

@@ -44,13 +44,7 @@ function App() {
         </PrivateRout>
         <Route path='*'>
           <PageNotFound></PageNotFound>
-
         </Route>
-        
-
-
-
-
       </Switch>
 
 
